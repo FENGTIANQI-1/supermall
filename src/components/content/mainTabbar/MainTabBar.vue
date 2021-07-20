@@ -1,9 +1,15 @@
 <template>
   <tab-bar>
     <tab-bar-item path="/home">
+    <template #item-icon>
       <img slot="item-icon" src="~assets/img/tabbar/home.svg" alt="">
+    </template>
+    <template #item-icon-active>
       <img slot="item-icon-active" src="~assets/img/tabbar/home_active.svg" alt="">
-      <div slot="item-text">首页</div>
+    </template>
+    <template #item-text>
+      <div>首页</div>
+    </template>
     </tab-bar-item>
     <tab-bar-item path="/category">
       <img slot="item-icon" src="~assets/img/tabbar/category.svg" alt="">
