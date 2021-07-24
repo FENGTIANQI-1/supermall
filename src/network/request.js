@@ -47,7 +47,7 @@ export function request(config) {
 
     // axios 拦截器
     instance.interceptors.request.use(config => {
-        console.log(config);
+        // console.log(config);
         return config /*释放 */
     }, err => {
         console.log(err);
@@ -56,7 +56,7 @@ export function request(config) {
 
     // 相应拦截
     instance.interceptors.response.use(res => {
-        console.log(res);
+        // console.log(res);
         return res.data /*释放 */
     }, err => {
         console.log(err);
