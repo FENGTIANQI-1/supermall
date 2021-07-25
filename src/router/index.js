@@ -6,6 +6,7 @@ const Category = () => import('../views/category/Category')
 const Cart = () => import('../views/cart/Cart')
 const Profile = () => import('../views/profile/Profile')
 const Detail = () => import('../views/detail/detail')
+const Login = () => import('../views/profile/Login')
 
 Vue.use(VueRouter)
 
@@ -28,12 +29,22 @@ const routes = [
   },
   {
     path: '/profile',
-    component: Profile
+    component: Profile,
+    // children: [
+    //   {
+    //     path: '/login',
+    //     component:Login
+    //   }
+    // ]
   },
   {
     path: '/detail/:iid',
     component: Detail
-  }
+  },
+       {
+        path: '/login',
+        component:Login
+      }
 ]
 
 const router = new VueRouter({
